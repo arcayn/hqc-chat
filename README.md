@@ -9,13 +9,13 @@ It uses the RMRS variant of the key exchange as it has smaller key/ciphertext si
 The interface is very basic. One person in the conversation is the passive participant, the other active. The passive participant runs
 
 ```
-$ hqcchat.py accept
+$ hqc-chat.py accept
 ``` 
 
 and waits for connection. The active participant then runs 
 
 ```
-$ hqcchat.py <active ip> <active port>
+$ hqc-chat.py <active ip> <active port>
 ```
 
 Public keys are exchanged and the participants are able to verify the SHA256 digests. From there, the passive participant will encapsulate a one-time encryption key and send it to the active participant, followed by the active participant generating a one-time signing key and sending it to the passive participant.
