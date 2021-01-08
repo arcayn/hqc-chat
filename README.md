@@ -1,8 +1,8 @@
 # HQC-chat
 
-**DISCLAIMER: This project is homemade for _fun_ and is NOT intended for genuine secure communication. DO NOT USE IT WITH _ANY_ EXPECTATION OF SECURITY. If you want to attack it, have fun!**
+A small p2p instant-messenger with EtM-authenticated AES encryption and a homemade implementation of Hamming Quasi_cyclicyclic Post-Quantum key exchange (https://pqc-hqc.org).
 
-A small p2p instant-messenger with EtM-authenticated AES encryption and a homemade implementation of HQC Post-Quantum key exchange (https://pqc-hqc.org).
+**DISCLAIMER: This project is homemade for _fun_ and is NOT intended for genuine secure communication. DO NOT USE IT WITH _ANY_ EXPECTATION OF SECURITY. If you want to attack it, have fun!**
 
 It uses the RMRS variant of the key exchange as it has smaller key/ciphertext sizes, and both key exchange and data encryption is done at the 256-bit security level. The hash function used for message signing is SHA256, and the hash parameters for the KEM are SHA3_512 and SHA512 (as two functions must be chosen otherwise the scheme will be broken, as mentioned in the whitepaper). The `theta` variable is converted to random bytes as required by means of a SHA512 HMAC-DRBG (dropping the first 256 bytes of the output stream out of habit).
 
