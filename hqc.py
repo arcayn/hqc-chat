@@ -57,12 +57,12 @@ class HQC:
         return ret
 
     def _convolute(self, b, a):
-        out, i, l = 0, 1, self.n
+        out, i, l = 0, 0, self.n
         while a > 0:
             if a & 1:
                 out ^= ((b & ((1 << (l - i)) - 1)) << i) | (b >> (l - i))
             a >>= 1
-            i += 1
+            i += (i + 1) % l
         return out
 
     def keygen(self):
