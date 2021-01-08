@@ -1,6 +1,6 @@
 # HQC-chat
 
-A small p2p instant-messenger with EtM-authenticated AES encryption and a homemade implementation of Hamming Quasi_cyclicyclic Post-Quantum key exchange (https://pqc-hqc.org).
+A small p2p instant-messenger with EtM-authenticated AES encryption and a homemade implementation of Hamming Quasi-Cyclic Post-Quantum key exchange (https://pqc-hqc.org).
 
 **DISCLAIMER: This project is homemade for _fun_ and is NOT intended for genuine secure communication. DO NOT USE IT WITH _ANY_ EXPECTATION OF SECURITY. If you want to attack it, have fun!**
 
